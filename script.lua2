@@ -8,10 +8,10 @@ local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local LocalPlayer = Players.LocalPlayer
 
-local ZQGui = Instance.new("ScreenGui")
-ZQGui.Name = "ZQHubGUI"
-ZQGui.Parent = CoreGui
-ZQGui.ResetOnSpawn = false
+local HMGui = Instance.new("ScreenGui")
+HMGui.Name = "MHGUI"
+HMGui.Parent = CoreGui
+HMGui.ResetOnSpawn = false
 
 -- دالة الأطراف المنحنية
 local function MakeCurvy(obj, amount)
@@ -52,12 +52,13 @@ KeyFrame.Size = UDim2.new(0, 320, 0, 190)
 KeyFrame.Position = UDim2.new(0.5, -160, 0.5, -95)
 KeyFrame.BackgroundColor3 = Color3.fromRGB(10, 10, 15)
 KeyFrame.BorderSizePixel = 0
-KeyFrame.Parent = ZQGui
+KeyFrame.Parent = HMGui
 MakeDraggable(KeyFrame)
 MakeCurvy(KeyFrame, 15)
 
 local KeyStroke = Instance.new("UIStroke")
-KeyStroke.Color = Color3.fromRGB(0, 120, 255)
+KeyStroke.Color = Color3.fromRGB(255, 0, 0)
+
 KeyStroke.Thickness = 2
 KeyStroke.Parent = KeyFrame
 
@@ -115,15 +116,18 @@ MakeDraggable(MainFrame)
 MakeCurvy(MainFrame, 20)
 
 local MainStroke = Instance.new("UIStroke")
-MainStroke.Color = Color3.fromRGB(160, 50, 255)
+MainStroke.Color = Color3.fromRGB(255, 50, 50)
+
 MainStroke.Thickness = 2
 MainStroke.Parent = MainFrame
 
 local MainTitle = Instance.new("TextLabel")
 MainTitle.Size = UDim2.new(1, 0, 0, 40)
 MainTitle.BackgroundTransparency = 1
-MainTitle.Text = "ZQ HUB"
-MainTitle.TextColor3 = Color3.fromRGB(190, 80, 255)
+MainTitle.Text = "HM HUB"
+MainTitle.TextColor3 = Color3.fromRGB(255, 50, 50)
+
+
 MainTitle.TextSize = 24
 MainTitle.Font = Enum.Font.GothamBold
 MainTitle.Parent = MainFrame
@@ -134,15 +138,16 @@ InfoLabel.Size = UDim2.new(1, 0, 0, 30)
 InfoLabel.Position = UDim2.new(0, 0, 0.16, 0)
 InfoLabel.BackgroundTransparency = 1
 InfoLabel.Text = ""
-InfoLabel.TextColor3 = Color3.fromRGB(190, 80, 255)
+InfoLabel.TextColor3 = Color3.fromRGB(255, 50, 50)
+
 InfoLabel.TextSize = 14
 InfoLabel.Font = Enum.Font.GothamMedium
 InfoLabel.TextTransparency = 1
 InfoLabel.Parent = MainFrame
 
 local function StartTextLoop()
-    -- تم استبدال Zennko بـ zqahub
-    local messages = {"تابع حساباتنا التيك", "zqahub", "qwaw493", "Follow our TikTok", "zqahub", "qwaw493"}
+    -- تم استبدال Zennko بـ HM
+    local messages = {"تابع حساباتنا التيك", "lemnawarmohamed", "HM", "Follow our TikTok", "lemnawarmohamed", "HM"}
     while true do
         for _, msg in ipairs(messages) do
             InfoLabel.Text = msg
